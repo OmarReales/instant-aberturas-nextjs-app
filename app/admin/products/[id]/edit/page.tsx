@@ -27,11 +27,11 @@ interface FormData {
   slug: string;
 }
 
-export default function EditProductPage({
-  params,
-}: {
+type PageProps = {
   params: { id: string };
-}) {
+};
+
+export default function EditProductPage({ params }: PageProps) {
   const productId = params.id;
 
   const router = useRouter();
