@@ -18,7 +18,7 @@ Aplicación web para Instant Aberturas desarrollada con Next.js. Esta plataforma
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [MongoDB](https://www.mongodb.com/) / [PostgreSQL](https://www.postgresql.org/)
+- [Firebase/Firestore](https://firebase.google.com/docs/firestore)
 
 ## Instalación
 
