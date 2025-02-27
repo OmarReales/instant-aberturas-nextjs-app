@@ -30,10 +30,10 @@ interface FormData {
 export default function EditProductPage({
   params,
 }: {
-  params: Promise<{ id: string }> | { id: string };
+  params: { id: string } | Promise<{ id: string }>;
 }) {
-  const resolvedParams = "then" in params ? use(params) : params;
-  const productId = resolvedParams.id;
+  const unwrappedParams = "then" in params ? use(params) : params;
+  const productId = unwrappedParams.id;
 
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
