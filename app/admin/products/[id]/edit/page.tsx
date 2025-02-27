@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/app/components/ui/button";
 import { Input } from "@/app/components/ui/input";
@@ -30,10 +30,9 @@ interface FormData {
 export default function EditProductPage({
   params,
 }: {
-  params: { id: string } | Promise<{ id: string }>;
+  params: { id: string };
 }) {
-  const unwrappedParams = "then" in params ? use(params) : params;
-  const productId = unwrappedParams.id;
+  const productId = params.id;
 
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
