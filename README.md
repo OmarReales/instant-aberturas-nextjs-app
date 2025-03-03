@@ -51,8 +51,6 @@ Aplicación web para Instant Aberturas desarrollada con Next.js. Esta plataforma
 
    La aplicación estará disponible en [http://localhost:3000](http://localhost:3000)
 
-## Estructura del Proyecto
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
