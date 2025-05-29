@@ -27,14 +27,12 @@ interface FormData {
   slug: string;
 }
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
-export default function EditProductPage({ params }: PageProps) {
+// Define la interfaz sin parámetros locales para evitar conflictos con los tipos de Next.js
+export default function EditProductPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const productId = params.id;
 
   const router = useRouter();
