@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { Button } from "@/app/components/ui/button";
-import { Check } from "lucide-react"; // Import the Check icon
+import { Check } from "lucide-react";
 
 interface ProductFiltersProps {
   categories: string[];

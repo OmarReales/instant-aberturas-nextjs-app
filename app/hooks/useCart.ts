@@ -13,7 +13,7 @@ export function useCart() {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  console.log(user);
+
   useEffect(() => {
     async function loadCart() {
       if (!user || !user.uid) {

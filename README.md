@@ -1,69 +1,105 @@
-# Instant Aberturas - Next.js Application
+# Instant Aberturas - Next.js E-commerce
 
-## Descripción
+A modern e-commerce platform for Instant Aberturas, specializing in doors, windows, and related products. Built with Next.js 15, TypeScript, and Firebase.
 
-Aplicación web para Instant Aberturas desarrollada con Next.js. Esta plataforma permite la gestión de productos, presupuestos y clientes para el negocio de aberturas.
+## Features
 
-## Características
+- **Product Catalog**: Browse products by category with filters for brand and other attributes
+- **Shopping Cart**: Add products to cart and checkout securely
+- **User Authentication**: Sign up, login, and profile management
+- **Order Management**: Track order history and status
+- **Admin Panel**: Manage products, inventory, and orders
+- **Responsive Design**: Optimized for mobile, tablet, and desktop devices
 
-- Catálogo de productos con categorías
-- Sistema de presupuestos online
-- Panel de administración
-- Diseño responsive
-- Optimización SEO
+## Tech Stack
 
-## Tecnologías
+- **Frontend**: Next.js 15, React, TypeScript
+- **Styling**: Tailwind CSS, Shadcn UI components
+- **Authentication**: Firebase Authentication
+- **Database**: Firebase Firestore
+- **Image Storage**: Firebase Storage, Cloudinary
 
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Firebase/Firestore](https://firebase.google.com/docs/firestore)
+## Getting Started
 
-## Instalación
+### Prerequisites
 
-1. Clonar el repositorio:
+- Node.js 18.x or higher
+- npm or yarn
+- Firebase account
 
-   ```bash
-   git clone [url-del-repositorio]
-   cd instant-aberturas-app-nextjs
-   ```
+### Installation
 
-2. Instalar dependencias:
+1. Clone the repository
 
-   ```bash
-   npm install
-   # o
-   yarn install
-   ```
+```bash
+git clone https://github.com/your-username/instant-aberturas-app-nextjs.git
+cd instant-aberturas-app-nextjs
+```
 
-3. Configurar variables de entorno:
+2. Install dependencies
 
-   - Crear un archivo `.env.local` basado en `.env.example`
+```bash
+npm install
+# or
+yarn install
+```
 
-4. Iniciar el servidor de desarrollo:
+3. Set up environment variables
+   Create a `.env` file in the root directory based on the `.env.example` file:
 
-   ```bash
-   npm run dev
-   # o
-   yarn dev
-   ```
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+```
 
-   La aplicación estará disponible en [http://localhost:3000](http://localhost:3000)
+4. Run the development server
 
-## Learn More
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/app` - Next.js app directory with routes and components
+- `/app/components` - Reusable UI components
+- `/app/lib` - Utility functions and API services
+- `/app/context` - React context providers
+- `/app/hooks` - Custom React hooks
+- `/public` - Static assets like images and icons
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project can be deployed to Vercel with minimal configuration:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+# or
+yarn build
+```
 
-#
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature/my-new-feature`
+5. Submit a pull request
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Firebase](https://firebase.google.com/) - Backend services
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Shadcn UI](https://ui.shadcn.com/) - UI component library

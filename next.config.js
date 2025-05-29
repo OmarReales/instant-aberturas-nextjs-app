@@ -1,13 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    // It's better to fix type errors than ignore them
-    // ignoreBuildErrors: true,
-  },
-  eslint: {
-    // It's better to fix linting errors than ignore them
-    // ignoreDuringBuilds: true,
-  },
+  typescript: {},
+  eslint: {},
   images: {
     remotePatterns: [
       {
