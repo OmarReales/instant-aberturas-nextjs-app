@@ -23,7 +23,7 @@ export function ProductFilters({
     } else {
       params.set("category", category);
     }
-    router.push(`/products?${params.toString()}`);
+    router.push(`/products?${params.toString()}`, { scroll: false });
   };
   const handleBrandClick = (brand: string) => {
     const params = new URLSearchParams(window.location.search);
@@ -32,7 +32,7 @@ export function ProductFilters({
     } else {
       params.set("brand", brand);
     }
-    router.push(`/products?${params.toString()}`);
+    router.push(`/products?${params.toString()}`, { scroll: false });
   };
   return (
     <div className="space-y-6">

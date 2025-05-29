@@ -2,8 +2,6 @@ import { getProducts, getCategories, getBrands } from "@/app/lib/products";
 import { ProductGrid } from "@/app/components/product-grid";
 import { ProductFilters } from "@/app/components/product-filters";
 
-export const dynamic = "force-dynamic";
-
 export default async function ProductsPage(props: any) {
   const [products, categories, brands] = await Promise.all([
     getProducts(),

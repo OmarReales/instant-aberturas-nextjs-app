@@ -13,6 +13,7 @@ export function ProductGrid({ products }: ProductGridProps) {
           key={product.slug}
           href={`/products/${product.slug}`}
           className="group"
+          prefetch={true}
         >
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             <div className="relative h-64">

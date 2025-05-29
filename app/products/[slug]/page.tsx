@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 import { getProducts, getProductBySlug } from "@/app/lib/products";
 import { AddToCartButton } from "@/app/components/add-to-cart-button";
 import { notFound } from "next/navigation";
