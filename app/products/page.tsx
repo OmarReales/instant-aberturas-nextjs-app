@@ -4,22 +4,16 @@ import { ProductFilters } from "@/app/components/product-filters";
 
 export const dynamic = "force-dynamic";
 
-export default async function ProductsPage({
-  searchParams,
-}: {
-  searchParams:
-    | Promise<{ category?: string; brand?: string }>
-    | { category?: string; brand?: string };
-}) {
-  const [products, categories, brands, resolvedParams] = await Promise.all([
+export default async function ProductsPage(props: any) {
+  const [products, categories, brands] = await Promise.all([
     getProducts(),
     getCategories(),
     getBrands(),
-    Promise.resolve(searchParams),
   ]);
+  const searchParams = props.searchParams;
 
-  const categoryParam = resolvedParams?.category || "";
-  const brandParam = resolvedParams?.brand || "";
+  const categoryParam = searchParams?.category || "";
+  const brandParam = searchParams?.brand || "";
 
   let filteredProducts = products;
 
