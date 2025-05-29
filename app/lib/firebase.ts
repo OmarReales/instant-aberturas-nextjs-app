@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps, FirebaseApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
@@ -11,7 +11,43 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-const app = initializeApp(firebaseConfig);
+// Validate Firebase config
+const validateFirebaseConfig = () => {
+  const requiredFields = [
+    "apiKey",
+    "authDomain",
+    "projectId",
+    "storageBucket",
+    "messagingSenderId",
+    "appId",
+  ];
+
+  const missingFields = requiredFields.filter(
+    (field) => !firebaseConfig[field as keyof typeof firebaseConfig]
+  );
+
+  if (missingFields.length > 0) {
+    console.error(
+      `Firebase configuration missing required fields: ${missingFields.join(
+        ", "
+      )}`
+    );
+    console.error("Please check your .env.local file");
+    return false;
+  }
+
+  return true;
+};
+
+let app: FirebaseApp;
+
+if (validateFirebaseConfig() && getApps().length === 0) {
+  app = initializeApp(firebaseConfig);
+} else if (getApps().length > 0) {
+  app = getApps()[0];
+} else {
+  throw new Error("Firebase configuration is invalid");
+}
 
 export const db = getFirestore(app);
 export const auth = getAuth(app);

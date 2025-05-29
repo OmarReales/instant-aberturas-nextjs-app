@@ -1,12 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors: true,
+    // It's better to fix type errors than ignore them
+    // ignoreBuildErrors: true,
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    // It's better to fix linting errors than ignore them
+    // ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "firebasestorage.googleapis.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "**",
+      },
+    ],
+  },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

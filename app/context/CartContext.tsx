@@ -4,18 +4,7 @@ import { Product } from "../lib/products";
 import { db } from "../lib/firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { useAuth } from "./AuthContext";
-import { CartItem } from "../types";
-
-interface CartContextType {
-  cart: CartItem[];
-  loading: boolean;
-  addProductToCart: (product: Product, quantity: number) => Promise<void>;
-  removeProductFromCart: (productId: string) => Promise<void>;
-  updateProductQuantity: (productId: string, quantity: number) => Promise<void>;
-  clearCart: () => Promise<void>;
-  total: number;
-  error: string | null;
-}
+import { CartItem, CartContextType } from "../types";
 const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([]);

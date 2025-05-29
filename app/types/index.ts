@@ -33,10 +33,10 @@ export interface AuthContextType {
 export interface CartContextType {
   cart: CartItem[];
   loading: boolean;
-  addProductToCart: (productId: string, quantity: number) => void;
-  removeProductFromCart: (id: string) => void;
-  updateProductQuantity: (id: string, quantity: number) => void;
-  clearCart: () => void;
+  addProductToCart: (product: any, quantity: number) => Promise<void>;
+  removeProductFromCart: (id: string) => Promise<void>;
+  updateProductQuantity: (id: string, quantity: number) => Promise<void>;
+  clearCart: () => Promise<void>;
   total: number;
   error: string | null;
 }

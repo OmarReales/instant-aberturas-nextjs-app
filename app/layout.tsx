@@ -10,14 +10,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Instant Aberturas",
-  description: "Instant Aberutras app",
+  description: "Instant Aberturas app",
   icons: {
     icon: "/instantAberturasLogo.svg",
     apple: "/instantAberturasLogo.svg",
   },
   openGraph: {
-    title: "Instant Aberutras app",
-    description: "Instant Aberutras app",
+    title: "Instant Aberturas app",
+    description: "Instant Aberturas app",
     type: "website",
     authors: "https://github.com/OmarReales",
   },

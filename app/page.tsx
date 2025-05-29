@@ -8,12 +8,12 @@ import { LoadingComponent } from "./components/ui/loading";
 import { ErrorBoundary } from "./components/error-boundary";
 
 export const metadata = {
-  title: "Instant Aberutras app",
-  description: "Instant Aberutras app",
-  keywords: "Instant Aberutras app",
+  title: "Instant Aberturas app",
+  description: "Instant Aberturas app",
+  keywords: "Instant Aberturas app",
   openGraph: {
-    title: "Instant Aberutras app",
-    description: "Instant Aberutras app",
+    title: "Instant Aberturas app",
+    description: "Instant Aberturas app",
     type: "website",
     authors: "https://github.com/OmarReales",
   },
