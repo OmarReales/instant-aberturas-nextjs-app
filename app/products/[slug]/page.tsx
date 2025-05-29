@@ -11,12 +11,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ProductPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const slug = params.slug;
+export default async function ProductPage(props: any) {
+  const slug = props.params.slug;
 
   if (!slug) {
     notFound();
