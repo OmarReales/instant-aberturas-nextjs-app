@@ -27,9 +27,12 @@ interface FormData {
   slug: string;
 }
 
-type PageProps = {
-  params: { id: string };
-};
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
 
 export default function EditProductPage({ params }: PageProps) {
   const productId = params.id;
